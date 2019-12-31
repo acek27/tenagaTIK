@@ -23,7 +23,7 @@
          folder instead of downloading all of them to reduce the load. -->
     <link rel="stylesheet" href="{{asset('dist/css/skins/all-md-skins.min.css')}}">
     <!-- Morris chart -->
-{{--    <link rel="stylesheet" href="{{asset('bower_components/morris.js/morris.css')}}">--}}
+    <link rel="stylesheet" href="{{asset('bower_components/morris.js/morris.css')}}">
 <!-- jvectormap -->
     <link rel="stylesheet" href="{{asset('bower_components/jvectormap/jquery-jvectormap.css')}}">
     <!-- Date Picker -->
@@ -81,17 +81,24 @@
                                     <small>KOMINFO SITUBONDO</small>
                                 </p>
                             </li>
-
+                        @can('admin')
                             <!-- Menu Footer-->
-                            <li class="user-footer">
-                                <div class="pull-left">
-                                    <a href="#" class="btn btn-default btn-flat">Profile</a>
-                                </div>
-                                <div class="pull-right">
-                                    <a href="#" class="btn btn-default btn-flat">Sign out</a>
-                                </div>
-                            </li>
+                                <li class="user-footer">
+                                    <div class="pull-left">
+                                        <a href="#" class="btn btn-default btn-flat">Profile</a>
+                                    </div>
+                                    <div class="pull-right">
+                                        <a href="{{ route('logout') }}" class="btn btn-default btn-flat"
+                                           onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">Sign out</a>
+                                        <form id="logout-form" action="{{ route('logout') }}" method="POST"
+                                              style="display: none;">
+                                            @csrf
+                                        </form>
+                                    </div>
+                                </li>
                         </ul>
+                        @endcan
                     </li>
                     <!-- Control Sidebar Toggle Button -->
 
@@ -374,8 +381,8 @@
     $.material.init();
 </script>
 <!-- Morris.js charts -->
-{{--<script src="{{asset('bower_components/raphael/raphael.min.js')}}"></script>--}}
-{{--<script src="{{asset('bower_components/morris.js/morris.min.js')}}"></script>--}}
+<script src="{{asset('bower_components/raphael/raphael.min.js')}}"></script>
+<script src="{{asset('bower_components/morris.js/morris.min.js')}}"></script>
 <!-- Sparkline -->
 <script src="{{asset('bower_components/jquery-sparkline/dist/jquery.sparkline.min.js')}}"></script>
 <!-- jvectormap -->

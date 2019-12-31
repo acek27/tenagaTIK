@@ -17,5 +17,11 @@
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
 Route::Resource('/', 'tenagaController');
+
+
+Route::middleware(['auth', 'can:admin'])->group(function () {
+//    Route::prefix('user')->group(function () {
+//    });
+        Route::resource('/home', 'adminController');
+});
