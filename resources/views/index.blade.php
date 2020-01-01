@@ -95,7 +95,7 @@
                                 </div>
                                 <div class="form-group" style="margin-top: 0px">
                                     <label for="alamat" class="col-sm-3 control-label"
-                                           style="font-size: 12pt">Alamat</label>
+                                           style="font-size: 12pt">Alamat Lengkap</label>
                                     <div class="col-sm-8">
                                         <input name="alamat" type="text" class="form-control" value="{{old('alamat')}}" id="alamat" required>
                                     </div>

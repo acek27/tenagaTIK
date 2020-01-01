@@ -9,7 +9,7 @@
 @section('header')
     <section class="content-header">
         <h1>
-            ADMIN PSTIK
+            Dashboard
             <small>Dinas Kominfo dan Persandian</small>
         </h1>
         <ol class="breadcrumb">
@@ -26,13 +26,15 @@
                 <!-- small box -->
                 <div class="small-box bg-aqua">
                     <div class="inner">
-                        <h3>{{$data->where('id_divisi',1)->count('id_tenaga')}}<sup style="font-size: 20px"> Orang</sup></h3>
+                        <h3>{{$data->where('id_divisi',1)->count('id_tenaga')}}<sup style="font-size: 20px"> Orang</sup>
+                        </h3>
                         <p>Programming</p>
                     </div>
                     <div class="icon">
                         <i class="fa fa-code"></i>
                     </div>
-                    <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+                    <a href="{{route('home.show',1)}}" class="small-box-footer">More info <i
+                            class="fa fa-arrow-circle-right"></i></a>
                 </div>
             </div>
             <!-- ./col -->
@@ -40,14 +42,16 @@
                 <!-- small box -->
                 <div class="small-box bg-green">
                     <div class="inner">
-                        <h3>{{$data->where('id_divisi',1)->count('id_tenaga')}}<sup style="font-size: 20px"> Orang</sup></h3>
+                        <h3>{{$data->where('id_divisi',2)->count('id_tenaga')}}<sup style="font-size: 20px"> Orang</sup>
+                        </h3>
 
                         <p>Networking</p>
                     </div>
                     <div class="icon">
                         <i class="fa fa-sitemap"></i>
                     </div>
-                    <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+                    <a href="{{route('home.show',2)}}" class="small-box-footer">More info <i
+                            class="fa fa-arrow-circle-right"></i></a>
                 </div>
             </div>
             <!-- ./col -->
@@ -55,14 +59,16 @@
                 <!-- small box -->
                 <div class="small-box bg-yellow">
                     <div class="inner">
-                        <h3>{{$data->where('id_divisi',3)->count('id_tenaga')}}<sup style="font-size: 20px"> Orang</sup></h3>
+                        <h3>{{$data->where('id_divisi',3)->count('id_tenaga')}}<sup style="font-size: 20px"> Orang</sup>
+                        </h3>
 
                         <p>Multimedia</p>
                     </div>
                     <div class="icon">
                         <i class="fa fa-image"></i>
                     </div>
-                    <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+                    <a href="{{route('home.show',3)}}" class="small-box-footer">More info <i
+                            class="fa fa-arrow-circle-right"></i></a>
                 </div>
             </div>
             <!-- ./col -->
@@ -70,14 +76,16 @@
                 <!-- small box -->
                 <div class="small-box bg-red">
                     <div class="inner">
-                        <h3>{{$data->where('id_divisi',4)->count('id_tenaga')}}<sup style="font-size: 20px"> Orang</sup></h3>
+                        <h3>{{$data->where('id_divisi',4)->count('id_tenaga')}}<sup style="font-size: 20px"> Orang</sup>
+                        </h3>
 
                         <p>Keamanan Informasi</p>
                     </div>
                     <div class="icon">
                         <i class="fa fa-key"></i>
                     </div>
-                    <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+                    <a href="{{route('home.show',4)}}" class="small-box-footer">More info <i
+                            class="fa fa-arrow-circle-right"></i></a>
                 </div>
             </div>
             <!-- ./col -->
@@ -87,22 +95,18 @@
         <div class="row">
             <!-- Left col -->
             <section class="col-lg-7 connectedSortable">
-                <!-- Custom tabs (Charts with tabs)-->
-                <div class="nav-tabs-custom">
-                    <!-- Tabs within a box -->
-                    <ul class="nav nav-tabs pull-right">
-                        <li class="active"><a href="#revenue-chart" data-toggle="tab">Area</a></li>
-                        <li><a href="#sales-chart" data-toggle="tab">Donut</a></li>
-                        <li class="pull-left header"><i class="fa fa-pie-chart"></i> Grafik Tenaga TIK</li>
-                    </ul>
-                    <div class="tab-content no-padding">
-                        <!-- Morris chart - Sales -->
-                        <div class="chart tab-pane active" id="revenue-chart" style="position: relative; height: 300px;"></div>
-                        <div class="chart tab-pane" id="sales-chart" style="position: relative; height: 300px;"></div>
+                <div class="box box-primary">
+                    <div class="box-header with-border">
+                        <i class="fa fa-bar-chart"></i>
+                        <h3 class="box-title">Grafik Tenaga Teknis TIK</h3>
                     </div>
+                    <div class="box-body">
+                        <div class="chart">
+                            <canvas id="myChart" style="height:230px"></canvas>
+                        </div>
+                    </div>
+                    <!-- /.box-body -->
                 </div>
-                <!-- /.nav-tabs-custom -->
-
                 <!-- Chat box -->
                 <div class="box box-success">
                     <div class="box-header">
@@ -112,16 +116,18 @@
 
                         <div class="box-tools pull-right" data-toggle="tooltip" title="Status">
                             <div class="btn-group" data-toggle="btn-toggle">
-                                <button type="button" class="btn btn-default btn-sm active"><i class="fa fa-square text-green"></i>
+                                <button type="button" class="btn btn-default btn-sm active"><i
+                                        class="fa fa-square text-green"></i>
                                 </button>
-                                <button type="button" class="btn btn-default btn-sm"><i class="fa fa-square text-red"></i></button>
+                                <button type="button" class="btn btn-default btn-sm"><i
+                                        class="fa fa-square text-red"></i></button>
                             </div>
                         </div>
                     </div>
                     <div class="box-body chat" id="chat-box">
                         <!-- chat item -->
                         <div class="item">
-                            <img src="dist/img/user4-128x128.jpg" alt="user image" class="online">
+                            <img src="{{asset('dist/img/user4-128x128.jpg')}}" alt="user image" class="online">
 
                             <p class="message">
                                 <a href="#" class="name">
@@ -148,7 +154,7 @@
                         <!-- /.item -->
                         <!-- chat item -->
                         <div class="item">
-                            <img src="dist/img/user3-128x128.jpg" alt="user image" class="offline">
+                            <img src="{{asset('dist/img/user3-128x128.jpg')}}" alt="user image" class="offline">
 
                             <p class="message">
                                 <a href="#" class="name">
@@ -298,7 +304,8 @@
                     </div>
                     <!-- /.box-body -->
                     <div class="box-footer clearfix no-border">
-                        <button type="button" class="btn btn-default pull-right"><i class="fa fa-plus"></i> Add item</button>
+                        <button type="button" class="btn btn-default pull-right"><i class="fa fa-plus"></i> Add item
+                        </button>
                     </div>
                 </div>
                 <!-- /.box -->
@@ -345,47 +352,13 @@
                 <!-- Map box -->
                 <div class="box box-solid bg-light-blue-gradient">
                     <div class="box-header">
-                        <!-- tools box -->
-                        <div class="pull-right box-tools">
-                            <button type="button" class="btn btn-primary btn-sm daterange pull-right" data-toggle="tooltip"
-                                    title="Date range">
-                                <i class="fa fa-calendar"></i></button>
-                            <button type="button" class="btn btn-primary btn-sm pull-right" data-widget="collapse"
-                                    data-toggle="tooltip" title="Collapse" style="margin-right: 5px;">
-                                <i class="fa fa-minus"></i></button>
-                        </div>
-                        <!-- /. tools -->
-
-                        <i class="fa fa-map-marker"></i>
-
+                        <i class="glyphicon glyphicon-education"></i>
                         <h3 class="box-title">
-                            Visitors
+                            Pendidikan
                         </h3>
+                        <canvas id="donat" style="height:230px"></canvas>
                     </div>
-                    <div class="box-body">
-                        <div id="world-map" style="height: 250px; width: 100%;"></div>
-                    </div>
-                    <!-- /.box-body-->
-                    <div class="box-footer no-border">
-                        <div class="row">
-                            <div class="col-xs-4 text-center" style="border-right: 1px solid #f4f4f4">
-                                <div id="sparkline-1"></div>
-                                <div class="knob-label">Visitors</div>
-                            </div>
-                            <!-- ./col -->
-                            <div class="col-xs-4 text-center" style="border-right: 1px solid #f4f4f4">
-                                <div id="sparkline-2"></div>
-                                <div class="knob-label">Online</div>
-                            </div>
-                            <!-- ./col -->
-                            <div class="col-xs-4 text-center">
-                                <div id="sparkline-3"></div>
-                                <div class="knob-label">Exists</div>
-                            </div>
-                            <!-- ./col -->
-                        </div>
-                        <!-- /.row -->
-                    </div>
+
                 </div>
                 <!-- /.box -->
 
@@ -397,9 +370,11 @@
                         <h3 class="box-title">Sales Graph</h3>
 
                         <div class="box-tools pull-right">
-                            <button type="button" class="btn bg-teal btn-sm" data-widget="collapse"><i class="fa fa-minus"></i>
+                            <button type="button" class="btn bg-teal btn-sm" data-widget="collapse"><i
+                                    class="fa fa-minus"></i>
                             </button>
-                            <button type="button" class="btn bg-teal btn-sm" data-widget="remove"><i class="fa fa-times"></i>
+                            <button type="button" class="btn bg-teal btn-sm" data-widget="remove"><i
+                                    class="fa fa-times"></i>
                             </button>
                         </div>
                     </div>
@@ -410,21 +385,24 @@
                     <div class="box-footer no-border">
                         <div class="row">
                             <div class="col-xs-4 text-center" style="border-right: 1px solid #f4f4f4">
-                                <input type="text" class="knob" data-readonly="true" value="20" data-width="60" data-height="60"
+                                <input type="text" class="knob" data-readonly="true" value="20" data-width="60"
+                                       data-height="60"
                                        data-fgColor="#39CCCC">
 
                                 <div class="knob-label">Mail-Orders</div>
                             </div>
                             <!-- ./col -->
                             <div class="col-xs-4 text-center" style="border-right: 1px solid #f4f4f4">
-                                <input type="text" class="knob" data-readonly="true" value="50" data-width="60" data-height="60"
+                                <input type="text" class="knob" data-readonly="true" value="50" data-width="60"
+                                       data-height="60"
                                        data-fgColor="#39CCCC">
 
                                 <div class="knob-label">Online</div>
                             </div>
                             <!-- ./col -->
                             <div class="col-xs-4 text-center">
-                                <input type="text" class="knob" data-readonly="true" value="30" data-width="60" data-height="60"
+                                <input type="text" class="knob" data-readonly="true" value="30" data-width="60"
+                                       data-height="60"
                                        data-fgColor="#39CCCC">
 
                                 <div class="knob-label">In-Store</div>
@@ -447,7 +425,8 @@
                         <div class="pull-right box-tools">
                             <!-- button with a dropdown -->
                             <div class="btn-group">
-                                <button type="button" class="btn btn-success btn-sm dropdown-toggle" data-toggle="dropdown">
+                                <button type="button" class="btn btn-success btn-sm dropdown-toggle"
+                                        data-toggle="dropdown">
                                     <i class="fa fa-bars"></i></button>
                                 <ul class="dropdown-menu pull-right" role="menu">
                                     <li><a href="#">Add new event</a></li>
@@ -456,9 +435,11 @@
                                     <li><a href="#">View calendar</a></li>
                                 </ul>
                             </div>
-                            <button type="button" class="btn btn-success btn-sm" data-widget="collapse"><i class="fa fa-minus"></i>
+                            <button type="button" class="btn btn-success btn-sm" data-widget="collapse"><i
+                                    class="fa fa-minus"></i>
                             </button>
-                            <button type="button" class="btn btn-success btn-sm" data-widget="remove"><i class="fa fa-times"></i>
+                            <button type="button" class="btn btn-success btn-sm" data-widget="remove"><i
+                                    class="fa fa-times"></i>
                             </button>
                         </div>
                         <!-- /. tools -->
@@ -518,6 +499,99 @@
             <!-- right col -->
         </div>
         <!-- /.row (main row) -->
-
     </section>
 @endsection
+@push('scripts')
+    <script src="{{url('https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js')}}"></script>
+    <script>
+        var ctx = document.getElementById('myChart').getContext('2d');
+        var myChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Programming', 'Networking', 'Multimedia', 'Keamanan Informasi'],
+                datasets: [{
+                    label: 'Tenaga Teknis TIK',
+                    data: [
+                        @foreach($chart as $data)
+                        {{$data->total}},
+                        @endforeach
+                    ],
+                    backgroundColor: [
+                        'rgba(0, 192, 239, 1)',
+                        'rgba(0, 166, 90, 1)',
+                        'rgba(243, 156, 18, 1)',
+                        'rgba(221, 75, 57, 1)',
+                    ],
+                    borderColor: [
+                        'rgba(0, 192, 239, 1)',
+                        'rgba(0, 166, 90, 1)',
+                        'rgba(243, 156, 18, 1)',
+                        'rgba(221, 75, 57, 1)',
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true,
+                            userCallback: function(label, index, labels) {
+                                // when the floored value is the same as the value we have a whole number
+                                if (Math.floor(label) === label) {
+                                    return label;
+                                }
+
+                            },
+                        }
+                    }],
+                },
+                legend: {
+                    display: false
+                },
+                tooltips: {
+                    callbacks: {
+                        label: function (tooltipItem) {
+                            return tooltipItem.yLabel;
+                        }
+                    }
+                }
+            }
+        });
+
+        var nut = document.getElementById('donat').getContext('2d');
+        var donat = new Chart(nut, {
+            type: 'doughnut',
+            data: {
+                labels: ['Diploma 3', 'Strata 1'],
+                datasets: [{
+                    label: 'Tenaga Teknis TIK',
+                    data: [
+                        @foreach($donat as $donut)
+                        {{$donut->total}},
+                        @endforeach
+                    ],
+                    backgroundColor: [
+                        'rgba(243, 156, 18, 1)',
+                        'rgba(221, 75, 57, 1)',
+                    ],
+                    borderColor: [
+                        'rgba(243, 156, 18, 1)',
+                        'rgba(221, 75, 57, 1)',
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                legend: {
+                    position: 'top',
+                },
+                animation: {
+                    animateScale: true,
+                    animateRotate: true
+                }
+            }
+        });
+    </script>
+@endpush
