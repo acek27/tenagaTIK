@@ -26,4 +26,5 @@ Route::middleware(['auth', 'can:admin'])->group(function () {
     Route::resource('/home', 'adminController');
     Route::get('/tenaga/data', 'adminController@datatenaga')
         ->name('tenaga.data');
+    Route::get('/biodata/{id}', 'adminController@biodata');
 });

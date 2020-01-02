@@ -64,6 +64,64 @@
             <!-- /.box-body -->
         </div>
     </section>
+    <div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Biodata Tenaga Teknis TIk</h4>
+                    <br>
+                    <div class="table-responsive">
+                        <table class="table">
+                            <tr>
+                                <th style="width:50%">Divisi</th>
+                                <td><p id="divisi"></td>
+                            </tr>
+                            <tr>
+                                <th>NIK</th>
+                                <td><p id="nik"></td>
+                            </tr>
+                            <tr>
+                                <th>Nama Lengkap & Gelar</th>
+                                <td><p id="nm_tenaga"></td>
+                            </tr>
+                            <tr>
+                                <th>Tempat, Tanggal Lahir</th>
+                                <td id="ttl"></td>
+                            </tr>
+                            <tr>
+                                <th>Alamat</th>
+                                <td id="alamat"></td>
+                            </tr>
+                            <tr>
+                                <th>E-Mail</th>
+                                <td id="email"></td>
+                            </tr>
+                            <tr>
+                                <th>No. HP</th>
+                                <td id="hp"></td>
+                            </tr>
+                            <tr>
+                                <th>Jenis Kelamin</th>
+                                <td id="jk"></td>
+                            </tr>
+                            <tr>
+                                <th>Pendidikan</th>
+                                <td id="pendidikan"></td>
+                            </tr>
+                            <tr>
+                                <th>NPWP</th>
+                                <td id="npwp"></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <br>
+                </div>
+            </div>
+        </div>
+    </div>
 @endsection
 @push('scripts')
     <script src="{{asset('bower_components/datatables.net/js/jquery.dataTables.min.js')}}"></script>
@@ -82,6 +140,22 @@
                     {data: 'email', name: 'email'},
                     {data: 'action', name: 'action', orderable: false, searchable: false, align: 'center'},
                 ]
+            });
+        });
+        $('body').on("click", '.show-data', function (e) {
+            $('#myModal').modal("show");
+            $.get("/biodata/" + $(this).attr('data-id'), function (data) {
+                console.log(data);
+                $('#divisi').text(data.nama_divisi);
+                $('#nik').text(data.nik);
+                $('#nm_tenaga').text(data.nm_tenaga);
+                $('#ttl').text(data.tempat_lahir +', '+ data.tgl_lahir);
+                $('#alamat').text(data.alamat);
+                $('#email').text(data.email);
+                $('#hp').text(data.telp);
+                $('#jk').text(data.jenis_kelamin);
+                $('#pendidikan').text(data.keterangan +' '+ data.prog_studi);
+                $('#npwp').text(data.npwp);
             });
         });
     </script>

@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4aef09c6-44b8-4cfe-ba07-8ae4913fa6f1" name="Default Changelist" comment="fitur admin">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/datatenaga.blade.php" afterDir="false" />
+    <list default="true" id="4aef09c6-44b8-4cfe-ba07-8ae4913fa6f1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/adminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/adminController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/datatenaga.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/datatenaga.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/master.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
@@ -183,7 +181,8 @@
       <workItem from="1577753993361" duration="19307000" />
       <workItem from="1577778072517" duration="4385000" />
       <workItem from="1577840428941" duration="6276000" />
-      <workItem from="1577866605781" duration="9188000" />
+      <workItem from="1577866605781" duration="13950000" />
+      <workItem from="1577924799559" duration="3142000" />
     </task>
     <task id="LOCAL-00001" summary="fitur admin">
       <created>1577781639881</created>
@@ -199,7 +198,14 @@
       <option name="project" value="LOCAL" />
       <updated>1577781646417</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="chart">
+      <created>1577885047544</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1577885047544</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -207,13 +213,14 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="fitur admin" />
-    <option name="LAST_COMMIT_MESSAGE" value="fitur admin" />
+    <MESSAGE value="chart" />
+    <option name="LAST_COMMIT_MESSAGE" value="chart" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="324" y="24" width="756" height="744" key="CommitChangelistDialog2" timestamp="1577851447062">
+    <state x="324" y="24" width="756" height="744" key="CommitChangelistDialog2" timestamp="1577885046999">
       <screen x="49" y="24" width="1317" height="744" />
     </state>
-    <state x="324" y="24" width="756" height="744" key="CommitChangelistDialog2/49.24.1317.744@49.24.1317.744" timestamp="1577851447062" />
+    <state x="324" y="24" width="756" height="744" key="CommitChangelistDialog2/49.24.1317.744@49.24.1317.744" timestamp="1577885046999" />
     <state x="290" y="133" width="824" height="523" key="IDE.errors.dialog" timestamp="1577674701845">
       <screen x="49" y="24" width="1317" height="744" />
     </state>
@@ -226,10 +233,10 @@
       <screen x="49" y="24" width="1317" height="744" />
     </state>
     <state x="219" y="30" key="SettingsEditor/49.24.1317.744@49.24.1317.744" timestamp="1577665995132" />
-    <state x="302" y="131" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1577781648447">
+    <state x="302" y="131" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1577885050124">
       <screen x="49" y="24" width="1317" height="744" />
     </state>
-    <state x="302" y="131" width="800" height="528" key="Vcs.Push.Dialog.v2/49.24.1317.744@49.24.1317.744" timestamp="1577781648447" />
+    <state x="302" y="131" width="800" height="528" key="Vcs.Push.Dialog.v2/49.24.1317.744@49.24.1317.744" timestamp="1577885050124" />
     <state x="371" y="57" width="662" height="675" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1577672483821">
       <screen x="49" y="24" width="1317" height="744" />
     </state>

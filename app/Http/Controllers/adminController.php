@@ -20,7 +20,7 @@ class adminController extends Controller
         $chart = tenagateknis::select(DB::raw('count(*) as total'))->groupby('id_divisi')->get();
         $donat = tenagateknis::select(DB::raw('count(*) as total'))->groupby('id_pendidikan')->get();
 //        return response()->json($chart);
-        return view('dashboard', compact('data', 'chart','donat'));
+        return view('dashboard', compact('data', 'chart', 'donat'));
     }
 
     /**
@@ -70,16 +70,28 @@ class adminController extends Controller
     public function datatenaga(Request $request)
     {
         if ($request->id == 0) {
-            return DataTables::of(tenagateknis::all())
-                ->make(true);
+            return DataTables::of(tenagateknis::join('tb_divisi', 'tb_tenagateknis.id_divisi', '=', 'tb_divisi.id_divisi'))
+                ->addColumn('action', function ($data) {
+                    $detail = '<a href="#" data-id="' . $data->id_tenaga . '" class="show-data"><i class="glyphicon glyphicon-search"></i></a>';
+                    return $detail;
+                })->make(true);
         } else {
             return DataTables::of(tenagateknis::join('tb_jk', 'tb_tenagateknis.id_jk', '=', 'tb_jk.id_jk')
                 ->where('tb_tenagateknis.id_divisi', $request->id))
                 ->addColumn('action', function ($data) {
-                    $detail = '<a href=""><i class="glyphicon glyphicon-search"> </i></a>';
+                    $detail = '<a href="#" data-id="' . $data->id_tenaga . '" class="show-data"><i class="glyphicon glyphicon-search"></i></a>';
                     return $detail;
                 })->make(true);
         }
+    }
+
+    public function biodata($id)
+    {
+        $biodata = tenagateknis::join('tb_jk', 'tb_tenagateknis.id_jk', '=', 'tb_jk.id_jk')
+            ->join('tb_pendidikanterakhir', 'tb_tenagateknis.id_pendidikan', '=', 'tb_pendidikanterakhir.id_pendidikan')
+            ->join('tb_divisi', 'tb_tenagateknis.id_divisi', '=', 'tb_divisi.id_divisi')
+            ->where('id_tenaga', $id)->first();
+        return $biodata;
     }
 
     /**

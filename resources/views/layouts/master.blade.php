@@ -125,14 +125,20 @@
             <!-- sidebar menu: : style can be found in sidebar.less -->
             <ul class="sidebar-menu" data-widget="tree">
                 <li class="header">MAIN NAVIGATION</li>
-                <li class="active treeview">
-                    <a href="#">
+                <li>
+                    <a href="{{route('home.index')}}">
                         <i class="fa fa-dashboard"></i> <span>Dashboard</span>
                         <span class="pull-right-container">
             </span>
                     </a>
                 </li>
-
+                <li>
+                    <a href="{{route('index')}}">
+                        <i class="fa fa-book"></i> <span>Data Baru</span>
+                        <span class="pull-right-container">
+            </span>
+                    </a>
+                </li>
             </ul>
         </section>
         <!-- /.sidebar -->
