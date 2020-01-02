@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="{{asset('dist/css/skins/all-md-skins.min.css')}}">
     <!-- Morris chart -->
     <link rel="stylesheet" href="{{asset('bower_components/morris.js/morris.css')}}">
-<!-- jvectormap -->
+    <!-- jvectormap -->
     <link rel="stylesheet" href="{{asset('bower_components/jvectormap/jquery-jvectormap.css')}}">
     <!-- Date Picker -->
 {{--    <link rel="stylesheet" href="{{asset('bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css')}}">--}}
@@ -125,6 +125,7 @@
             <!-- sidebar menu: : style can be found in sidebar.less -->
             <ul class="sidebar-menu" data-widget="tree">
                 <li class="header">MAIN NAVIGATION</li>
+                @can('admin')
                 <li>
                     <a href="{{route('home.index')}}">
                         <i class="fa fa-dashboard"></i> <span>Dashboard</span>
@@ -139,6 +140,7 @@
             </span>
                     </a>
                 </li>
+                    @endcan
             </ul>
         </section>
         <!-- /.sidebar -->

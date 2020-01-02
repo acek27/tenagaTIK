@@ -61,24 +61,32 @@
                                                 required>
                                             <option selected="selected" value="">-- Pilih Divisi --</option>
                                             @foreach($divisi as $value)
-                                                <option value="{{$value->id_divisi}}">{{$value->nama_divisi}}</option>
+                                                @if (Request::old('divisi') == $value->id_divisi)
+                                                    <option value="{{$value->id_divisi}}"
+                                                            selected>{{$value->nama_divisi}}</option>
+                                                @else
+                                                    <option
+                                                        value="{{$value->id_divisi}}">{{$value->nama_divisi}}</option>
+                                                @endif
                                             @endforeach
                                         </select>
                                     </div>
                                 </div>
                                 <div class="form-group" style="margin-top: 0px">
-                                    <label for="nama"  class="col-sm-3 control-label" style="font-size: 12pt">Nama
+                                    <label for="nama" class="col-sm-3 control-label" style="font-size: 12pt">Nama
                                         Lengkap & Gelar</label>
 
                                     <div class="col-sm-8">
-                                        <input type="text" class="form-control" name="nama" value="{{old('nama')}}" id="nama" required>
+                                        <input type="text" class="form-control" name="nama" value="{{old('nama')}}"
+                                               id="nama" required>
                                     </div>
                                 </div>
                                 <div class="form-group" style="margin-top: 0px">
                                     <label for="tempatlahir" class="col-sm-3 control-label" style="font-size: 12pt">Tempat
                                         lahir</label>
                                     <div class="col-sm-8">
-                                        <input type="text" name="tempatlahir" class="form-control" id="tempatlahir" value="{{old('tempatlahir')}}"
+                                        <input type="text" name="tempatlahir" class="form-control" id="tempatlahir"
+                                               value="{{old('tempatlahir')}}"
                                                required>
                                     </div>
                                 </div>
@@ -97,14 +105,16 @@
                                     <label for="alamat" class="col-sm-3 control-label"
                                            style="font-size: 12pt">Alamat Lengkap</label>
                                     <div class="col-sm-8">
-                                        <input name="alamat" type="text" class="form-control" value="{{old('alamat')}}" id="alamat" required>
+                                        <input name="alamat" type="text" class="form-control" value="{{old('alamat')}}"
+                                               id="alamat" required>
                                     </div>
                                 </div>
                                 <div class="form-group" style="margin-top: 0px">
                                     <label for="nik" class="col-sm-3 control-label"
                                            style="font-size: 12pt">NIK</label>
                                     <div class="col-sm-8">
-                                        <input name="nik" type="text" class="form-control" id="nik" value="{{old('jk')}}" required>
+                                        <input name="nik" type="text" class="form-control" id="nik"
+                                               value="{{old('nik')}}" required>
                                         @if ($errors->any())
                                             {!! $errors->first('nik', '<p style="font-size: 12px; color:red">ERROR! input NIK harus 16 digit dan Berupa Angka.</p>') !!}
                                         @endif
@@ -114,14 +124,19 @@
                                     <label for="email" class="col-sm-3 control-label"
                                            style="font-size: 12pt">E-mail</label>
                                     <div class="col-sm-8">
-                                        <input name="email" type="text" class="form-control" id="email" value="{{old('email')}}" required>
+                                        <input name="email" type="text" class="form-control" id="email"
+                                               value="{{old('email')}}" required>
+                                        @if ($errors->any())
+                                            {!! $errors->first('email', '<p style="font-size: 12px; color:red">ERROR! inputkan dengan format e-mail yang benar.</p>') !!}
+                                        @endif
                                     </div>
                                 </div>
                                 <div class="form-group" style="margin-top: 0px">
                                     <label for="hp" class="col-sm-3 control-label"
                                            style="font-size: 12pt">No. HP</label>
                                     <div class="col-sm-8">
-                                        <input type="text" class="form-control" name="hp" id="hp" value="{{old('hp')}}" required>
+                                        <input type="text" class="form-control" name="hp" id="hp" value="{{old('hp')}}"
+                                               required>
                                         @if ($errors->any())
                                             {!! $errors->first('hp', '<p style="font-size: 12px; color:red">ERROR! input No. HP Harus Berupa Angka.</p>') !!}
                                         @endif
@@ -135,7 +150,12 @@
                                                 style="width: 100%;" required>
                                             <option selected="selected" value="">-- Pilih Jenis Kelamin --</option>
                                             @foreach($jk as $data)
-                                                <option value="{{$data->id_jk}}">{{$data->jenis_kelamin}}</option>
+                                                @if (Request::old('jeniskelamin') == $data->id_jk)
+                                                    <option value="{{$data->id_jk}}"
+                                                            selected>{{$data->jenis_kelamin}}</option>
+                                                @else
+                                                    <option value="{{$data->id_jk}}">{{$data->jenis_kelamin}}</option>
+                                                @endif
                                             @endforeach
                                         </select>
                                     </div>
@@ -149,8 +169,10 @@
                                                     style="width: 100%;" required>
                                                 <option selected="selected" value="">-- Pilih Pendidikan Terakhir --
                                                 </option>
-                                                <option value="1">D3</option>
-                                                <option value="2">S1</option>
+                                                @foreach($pendidikan as $pend)
+                                                    <option
+                                                        value="{{$pend->id_pendidikan}}">{{$pend->keterangan}}</option>
+                                                @endforeach
                                             </select>
                                         </div>
                                         <div class="col-sm-3" style="display: none" id="divjurusan">
@@ -163,7 +185,8 @@
                                     <label for="npwp" class="col-sm-3 control-label"
                                            style="font-size: 12pt">Nomor NPWP</label>
                                     <div class="col-sm-8">
-                                        <input type="text" class="form-control" name="npwp" id="npwp" value="{{old('npwp')}}" required>
+                                        <input type="text" class="form-control" name="npwp" id="npwp"
+                                               value="{{old('npwp')}}" required>
 
                                     </div>
                                 </div>

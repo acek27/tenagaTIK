@@ -8,6 +8,7 @@ use App\pendidikan;
 use App\tenagateknis;
 use Illuminate\Http\Request;
 
+
 class tenagaController extends Controller
 {
     /**
@@ -19,7 +20,8 @@ class tenagaController extends Controller
     {
         $jk = jeniskelamin::all();
         $divisi = divisi::all();
-        return view('index', compact('jk','divisi'));
+        $pendidikan = pendidikan::all();
+        return view('index', compact('jk','divisi','pendidikan'));
     }
 
     /**
@@ -57,6 +59,7 @@ class tenagaController extends Controller
             'tanggallahir' => 'date|required',
             'nik' => 'numeric|digits:16|required',
             'hp' => 'numeric|required',
+            'email' => 'email|required',
         ]);
 
         $tenaga = new tenagateknis();
