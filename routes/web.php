@@ -27,4 +27,5 @@ Route::middleware(['auth', 'can:admin'])->group(function () {
     Route::get('/tenaga/data', 'adminController@datatenaga')
         ->name('tenaga.data');
     Route::get('/biodata/{id}', 'adminController@biodata');
+    Route::get('/download', 'adminController@download')->name('download');
 });

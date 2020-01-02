@@ -135,6 +135,10 @@
                 <h3 class="box-title">
                     Tabel Tenaga Teknis TIK
                 </h3>
+                <a href="{{route('download')}}" class="btn btn-primary pull-right" style="margin-right: 5px;">
+                    <i class="fa fa-download"></i> Download
+                    <div class="ripple-container"></div>
+                </a>
             </div>
             <!-- /.box-header -->
             <div class="box-body">
@@ -336,12 +340,12 @@
                 $('#divisi').text(data.nama_divisi);
                 $('#nik').text(data.nik);
                 $('#nm_tenaga').text(data.nm_tenaga);
-                $('#ttl').text(data.tempat_lahir +', '+ data.tgl_lahir);
+                $('#ttl').text(data.tempat_lahir + ', ' + data.tgl_lahir);
                 $('#alamat').text(data.alamat);
                 $('#email').text(data.email);
                 $('#hp').text(data.telp);
                 $('#jk').text(data.jenis_kelamin);
-                $('#pendidikan').text(data.keterangan +' '+ data.prog_studi);
+                $('#pendidikan').text(data.keterangan + ' ' + data.prog_studi);
                 $('#npwp').text(data.npwp);
             });
         });

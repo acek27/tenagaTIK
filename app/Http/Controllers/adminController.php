@@ -93,6 +93,13 @@ class adminController extends Controller
             ->where('id_tenaga', $id)->first();
         return $biodata;
     }
+    public function download()
+    {
+        $download = tenagateknis::join('tb_jk', 'tb_tenagateknis.id_jk', '=', 'tb_jk.id_jk')
+            ->join('tb_pendidikanterakhir', 'tb_tenagateknis.id_pendidikan', '=', 'tb_pendidikanterakhir.id_pendidikan')
+            ->join('tb_divisi', 'tb_tenagateknis.id_divisi', '=', 'tb_divisi.id_divisi')->get();
+        return view('download', compact('download'));
+    }
 
     /**
      * Update the specified resource in storage.
