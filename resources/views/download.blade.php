@@ -5,7 +5,7 @@ header("Content-Disposition: attachment; filename=tenaga_teknis_TIK.xlsx");
 ?>
 <h3>Data Tenaga Teknis TIK</h3>
 
-<table border="1" cellpadding="5">
+<table border="1">
     <tr>
         <th>NIK</th>
         <th>Nama Lengkap</th>
@@ -18,18 +18,18 @@ header("Content-Disposition: attachment; filename=tenaga_teknis_TIK.xlsx");
         <th>NPWP</th>
         <th>Divisi</th>
     </tr>
-    <tr>
-        @foreach($download as $value)
+    @foreach($download as $value)
+        <tr>
             <td>{{$value->nik}}</td>
-            <td>{{$value->nm_tenaga}}</td>
-            <td>{{$value->tempat_lahir}} ,{{$value->tgl_lahir}}</td>
-            <td>{{$value->alamat}}</td>
+            <td style="text-transform: capitalize">{{$value->nm_tenaga}}</td>
+            <td style="text-transform: capitalize">{{$value->tempat_lahir}} ,{{$value->tgl_lahir}}</td>
+            <td style="text-transform: capitalize">{{$value->alamat}}</td>
             <td>{{$value->email}}</td>
             <td>(+62) {{$value->telp}}</td>
-            <td>{{$value->jenis_kelamin}}</td>
-            <td>{{$value->keterangan}}/{{$value->prog_studi}}</td>
+            <td style="text-transform: lowercase">{{$value->jenis_kelamin}}</td>
+            <td style="text-transform: uppercase">{{$value->keterangan}}/{{$value->prog_studi}}</td>
             <td>{{$value->npwp}}</td>
             <td>{{$value->nama_divisi}}</td>
-        @endforeach
-    </tr>
+        </tr>
+    @endforeach
 </table>

@@ -231,9 +231,7 @@
                 datasets: [{
                     label: 'Tenaga Teknis TIK',
                     data: [
-                        @foreach($chart as $data)
-                        {{$data->total}},
-                        @endforeach
+                       {{$data1}}
                     ],
                     backgroundColor: [
                         'rgba(0, 192, 239, 1)',
@@ -349,6 +347,5 @@
                 $('#npwp').text(data.npwp);
             });
         });
-
     </script>
 @endpush

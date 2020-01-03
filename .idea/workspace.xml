@@ -2,11 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4aef09c6-44b8-4cfe-ba07-8ae4913fa6f1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/download.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/edittenaga.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/adminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/adminController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/tenagaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/tenagaController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/download.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/download.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -181,7 +182,7 @@
       <workItem from="1577778072517" duration="4385000" />
       <workItem from="1577840428941" duration="6276000" />
       <workItem from="1577866605781" duration="13950000" />
-      <workItem from="1577924799559" duration="8639000" />
+      <workItem from="1577924799559" duration="19597000" />
     </task>
     <task id="LOCAL-00001" summary="fitur admin">
       <created>1577781639881</created>
@@ -218,7 +219,14 @@
       <option name="project" value="LOCAL" />
       <updated>1577931737104</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="export excel">
+      <created>1577943720898</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1577943720898</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -229,13 +237,18 @@
     <MESSAGE value="chart" />
     <MESSAGE value="biodata tenaga teknis TIK" />
     <MESSAGE value="fix data baru" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix data baru" />
+    <MESSAGE value="export excel" />
+    <option name="LAST_COMMIT_MESSAGE" value="export excel" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="324" y="24" width="756" height="744" key="CommitChangelistDialog2" timestamp="1577931736896">
+    <state x="440" y="153" width="524" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1577948161518">
       <screen x="49" y="24" width="1317" height="744" />
     </state>
-    <state x="324" y="24" width="756" height="744" key="CommitChangelistDialog2/49.24.1317.744@49.24.1317.744" timestamp="1577931736896" />
+    <state x="440" y="153" width="524" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/49.24.1317.744@49.24.1317.744" timestamp="1577948161518" />
+    <state x="324" y="24" width="756" height="744" key="CommitChangelistDialog2" timestamp="1577943720714">
+      <screen x="49" y="24" width="1317" height="744" />
+    </state>
+    <state x="324" y="24" width="756" height="744" key="CommitChangelistDialog2/49.24.1317.744@49.24.1317.744" timestamp="1577943720714" />
     <state x="171" y="83" width="1053" height="625" key="DiffContextDialog" timestamp="1577931775777">
       <screen x="49" y="24" width="1317" height="744" />
     </state>
@@ -244,25 +257,25 @@
       <screen x="49" y="24" width="1317" height="744" />
     </state>
     <state x="290" y="133" width="824" height="523" key="IDE.errors.dialog/49.24.1317.744@49.24.1317.744" timestamp="1577674701845" />
-    <state x="543" y="321" width="319" height="147" key="NewPhpFileDialog" timestamp="1577942873745">
+    <state x="543" y="321" width="319" height="147" key="NewPhpFileDialog" timestamp="1577948038579">
       <screen x="49" y="24" width="1317" height="744" />
     </state>
-    <state x="543" y="321" width="319" height="147" key="NewPhpFileDialog/49.24.1317.744@49.24.1317.744" timestamp="1577942873745" />
+    <state x="543" y="321" width="319" height="147" key="NewPhpFileDialog/49.24.1317.744@49.24.1317.744" timestamp="1577948038579" />
     <state x="219" y="30" key="SettingsEditor" timestamp="1577665995132">
       <screen x="49" y="24" width="1317" height="744" />
     </state>
     <state x="219" y="30" key="SettingsEditor/49.24.1317.744@49.24.1317.744" timestamp="1577665995132" />
-    <state x="302" y="131" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1577931901714">
+    <state x="302" y="131" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1577943723652">
       <screen x="49" y="24" width="1317" height="744" />
     </state>
-    <state x="302" y="131" width="800" height="528" key="Vcs.Push.Dialog.v2/49.24.1317.744@49.24.1317.744" timestamp="1577931901714" />
+    <state x="302" y="131" width="800" height="528" key="Vcs.Push.Dialog.v2/49.24.1317.744@49.24.1317.744" timestamp="1577943723652" />
     <state x="371" y="57" width="662" height="675" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1577672483821">
       <screen x="49" y="24" width="1317" height="744" />
     </state>
     <state x="371" y="57" width="662" height="675" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/49.24.1317.744@49.24.1317.744" timestamp="1577672483821" />
-    <state x="371" y="174" key="run.anything.popup" timestamp="1577761196710">
+    <state x="371" y="174" key="run.anything.popup" timestamp="1577948536798">
       <screen x="49" y="24" width="1317" height="744" />
     </state>
-    <state x="371" y="174" key="run.anything.popup/49.24.1317.744@49.24.1317.744" timestamp="1577761196710" />
+    <state x="371" y="174" key="run.anything.popup/49.24.1317.744@49.24.1317.744" timestamp="1577948536798" />
   </component>
 </project>
