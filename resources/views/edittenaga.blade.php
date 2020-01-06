@@ -50,7 +50,7 @@
                             @endif
                         <!-- /.box-header -->
                             <!-- form start -->
-                            {!! Form::model($biodata,['url'=>route('home.up',$biodata->id_tenaga), 'class'=>'form-horizontal','method'=>'put']) !!}
+                            {!! Form::model($biodata,['url'=>route('home.update',$biodata->id_tenaga), 'class'=>'form-horizontal','method'=>'put']) !!}
                             @csrf
                             <div class="box-body">
                                 <div class="form-group" style="margin-top: 0px">
