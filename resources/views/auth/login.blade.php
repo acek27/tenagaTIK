@@ -77,7 +77,7 @@
                 </div>
                 <div class="col-xs-7">
                     <div class="checkbox">
-                        <a href="{{route('register')}}" class="text-center">Register now</a>
+                        <a href="{{route('daftar.index')}}" class="text-center">Register now</a>
                     </div>
                 </div>
                 <!-- /.col -->

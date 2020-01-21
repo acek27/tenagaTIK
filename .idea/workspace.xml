@@ -3,11 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="4aef09c6-44b8-4cfe-ba07-8ae4913fa6f1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/master.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -189,7 +186,7 @@
       <workItem from="1578288550789" duration="292000" />
       <workItem from="1578292694424" duration="201000" />
       <workItem from="1578358580357" duration="252000" />
-      <workItem from="1579572120616" duration="2724000" />
+      <workItem from="1579572120616" duration="15601000" />
     </task>
     <task id="LOCAL-00001" summary="fitur admin">
       <created>1577781639881</created>
@@ -254,7 +251,14 @@
       <option name="project" value="LOCAL" />
       <updated>1578288736213</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="route fix">
+      <created>1579574862315</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1579574862315</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -269,16 +273,19 @@
     <MESSAGE value="export excel edit data" />
     <MESSAGE value="view login" />
     <MESSAGE value="fix bug update" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix bug update" />
+    <MESSAGE value="route fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="route fix" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="440" y="153" width="524" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1577948161518">
-      <screen x="49" y="24" width="1317" height="744" />
+    <state x="406" y="151" width="524" height="480" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1579577268554">
+      <screen x="0" y="22" width="1366" height="746" />
     </state>
+    <state x="406" y="151" width="524" height="480" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.22.1366.746@0.22.1366.746" timestamp="1579577268554" />
     <state x="440" y="153" width="524" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/49.24.1317.744@49.24.1317.744" timestamp="1577948161518" />
-    <state x="285" y="25" width="785" height="743" key="CommitChangelistDialog2" timestamp="1578288735510">
-      <screen x="0" y="25" width="1366" height="743" />
+    <state x="285" y="22" width="726" height="742" key="CommitChangelistDialog2" timestamp="1579595810735">
+      <screen x="0" y="22" width="1366" height="746" />
     </state>
+    <state x="285" y="22" width="726" height="742" key="CommitChangelistDialog2/0.22.1366.746@0.22.1366.746" timestamp="1579595810735" />
     <state x="285" y="25" width="785" height="743" key="CommitChangelistDialog2/0.25.1366.743@0.25.1366.743" timestamp="1578288735510" />
     <state x="324" y="24" width="756" height="744" key="CommitChangelistDialog2/49.24.1317.744@49.24.1317.744" timestamp="1578198970052" />
     <state x="127" y="84" width="1093" height="625" key="DiffContextDialog" timestamp="1578288717228">
@@ -298,13 +305,18 @@
       <screen x="49" y="24" width="1317" height="744" />
     </state>
     <state x="543" y="321" width="319" height="147" key="NewPhpFileDialog/49.24.1317.744@49.24.1317.744" timestamp="1577948038579" />
+    <state x="494" y="109" width="367" height="568" key="RollbackChangesDialog" timestamp="1579585816491">
+      <screen x="0" y="22" width="1366" height="746" />
+    </state>
+    <state x="494" y="109" width="367" height="568" key="RollbackChangesDialog/0.22.1366.746@0.22.1366.746" timestamp="1579585816491" />
     <state x="219" y="30" key="SettingsEditor" timestamp="1577665995132">
       <screen x="49" y="24" width="1317" height="744" />
     </state>
     <state x="219" y="30" key="SettingsEditor/49.24.1317.744@49.24.1317.744" timestamp="1577665995132" />
-    <state x="262" y="132" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1578288738724">
-      <screen x="0" y="25" width="1366" height="743" />
+    <state x="262" y="129" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1579574870790">
+      <screen x="0" y="22" width="1366" height="746" />
     </state>
+    <state x="262" y="129" key="Vcs.Push.Dialog.v2/0.22.1366.746@0.22.1366.746" timestamp="1579574870790" />
     <state x="262" y="132" key="Vcs.Push.Dialog.v2/0.25.1366.743@0.25.1366.743" timestamp="1578288738724" />
     <state x="302" y="131" width="800" height="528" key="Vcs.Push.Dialog.v2/49.24.1317.744@49.24.1317.744" timestamp="1578198972823" />
     <state x="371" y="57" width="662" height="675" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1577672483821">

@@ -141,7 +141,7 @@
                 </a>
             </div>
             <!-- /.box-header -->
-            <div class="box-body">
+            <div class="box-body table-responsive">
                 <table id="data_tenaga" class="table table-bordered table-striped">
                     <thead>
                     <tr>
@@ -289,12 +289,12 @@
                         @endforeach
                     ],
                     backgroundColor: [
-                        'rgba(243, 156, 18, 1)',
-                        'rgba(221, 75, 57, 1)',
+                        'rgba(245, 245, 245, 1)',
+                        'rgba(191, 191, 191, 1)',
                     ],
                     borderColor: [
-                        'rgba(243, 156, 18, 1)',
-                        'rgba(221, 75, 57, 1)',
+                        'rgba(191, 191, 191, 1)',
+                        'rgba(245, 245, 245, 1)',
                     ],
                     borderWidth: 1
                 }]
@@ -326,7 +326,7 @@
                     {data: 'nm_tenaga', name: 'nm_tenaga'},
                     {data: 'tgl_lahir', name: 'tgl_lahir'},
                     {data: 'telp', name: 'telp'},
-                    {data: 'nama_divisi', name: 'nama_divisi'},
+                    {data: 'nama_divisi', name: 'nama_divisi',orderable: false, searchable: false, align: 'center'},
                     {data: 'action', name: 'action', orderable: false, searchable: false, align: 'center'},
                 ]
             });
