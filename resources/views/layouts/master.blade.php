@@ -134,7 +134,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="{{route('index')}}">
+                    <a href="{{route('daftar.index')}}">
                         <i class="fa fa-book"></i> <span>Data Baru</span>
                         <span class="pull-right-container">
             </span>

@@ -74,7 +74,11 @@
                 <!-- /.col -->
                 <div class="col-xs-5">
                     <button type="submit" class="btn btn-primary btn-raised btn-block btn-flat">Sign In</button>
-
+                </div>
+                <div class="col-xs-7">
+                    <div class="checkbox">
+                        <a href="{{route('register')}}" class="text-center">Register now</a>
+                    </div>
                 </div>
                 <!-- /.col -->
             </div>

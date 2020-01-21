@@ -50,7 +50,7 @@
                             @endif
                         <!-- /.box-header -->
                             <!-- form start -->
-                            {!! Form::open(['url'=>route('store'), 'class'=>'form-horizontal', 'method'=>'post']) !!}
+                            {!! Form::open(['url'=>route('daftar.store'), 'class'=>'form-horizontal', 'method'=>'post']) !!}
                             @csrf
                             <div class="box-body">
                                 <div class="form-group" style="margin-top: 0px">

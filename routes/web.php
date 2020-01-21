@@ -11,15 +11,14 @@
 |
 */
 
-//Route::get('/', function () {
-//    return view('index');
-//})->name('index');
+Route::get('/', function () {
+    return redirect()->route('home.index');
+})->name('index');
 
 Auth::routes();
 
-Route::Resource('/', 'tenagaController');
 
-
+Route::Resource('/daftar', 'tenagaController');
 Route::middleware(['auth', 'can:admin'])->group(function () {
 //    Route::prefix('user')->group(function () {
 //    });
