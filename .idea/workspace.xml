@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="4aef09c6-44b8-4cfe-ba07-8ae4913fa6f1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -186,7 +185,8 @@
       <workItem from="1578288550789" duration="292000" />
       <workItem from="1578292694424" duration="201000" />
       <workItem from="1578358580357" duration="252000" />
-      <workItem from="1579572120616" duration="15601000" />
+      <workItem from="1579572120616" duration="16709000" />
+      <workItem from="1579652737007" duration="1233000" />
     </task>
     <task id="LOCAL-00001" summary="fitur admin">
       <created>1577781639881</created>
@@ -258,7 +258,14 @@
       <option name="project" value="LOCAL" />
       <updated>1579574862315</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="route register &amp; color donut">
+      <created>1579595921578</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1579595921578</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -274,7 +281,8 @@
     <MESSAGE value="view login" />
     <MESSAGE value="fix bug update" />
     <MESSAGE value="route fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="route fix" />
+    <MESSAGE value="route register &amp; color donut" />
+    <option name="LAST_COMMIT_MESSAGE" value="route register &amp; color donut" />
   </component>
   <component name="WindowStateProjectService">
     <state x="406" y="151" width="524" height="480" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1579577268554">
@@ -282,10 +290,10 @@
     </state>
     <state x="406" y="151" width="524" height="480" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.22.1366.746@0.22.1366.746" timestamp="1579577268554" />
     <state x="440" y="153" width="524" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/49.24.1317.744@49.24.1317.744" timestamp="1577948161518" />
-    <state x="285" y="22" width="726" height="742" key="CommitChangelistDialog2" timestamp="1579595810735">
+    <state x="285" y="22" width="726" height="742" key="CommitChangelistDialog2" timestamp="1579595921164">
       <screen x="0" y="22" width="1366" height="746" />
     </state>
-    <state x="285" y="22" width="726" height="742" key="CommitChangelistDialog2/0.22.1366.746@0.22.1366.746" timestamp="1579595810735" />
+    <state x="285" y="22" width="726" height="742" key="CommitChangelistDialog2/0.22.1366.746@0.22.1366.746" timestamp="1579595921164" />
     <state x="285" y="25" width="785" height="743" key="CommitChangelistDialog2/0.25.1366.743@0.25.1366.743" timestamp="1578288735510" />
     <state x="324" y="24" width="756" height="744" key="CommitChangelistDialog2/49.24.1317.744@49.24.1317.744" timestamp="1578198970052" />
     <state x="127" y="84" width="1093" height="625" key="DiffContextDialog" timestamp="1578288717228">
@@ -313,10 +321,10 @@
       <screen x="49" y="24" width="1317" height="744" />
     </state>
     <state x="219" y="30" key="SettingsEditor/49.24.1317.744@49.24.1317.744" timestamp="1577665995132" />
-    <state x="262" y="129" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1579574870790">
+    <state x="262" y="129" width="800" height="524" key="Vcs.Push.Dialog.v2" timestamp="1579595923679">
       <screen x="0" y="22" width="1366" height="746" />
     </state>
-    <state x="262" y="129" key="Vcs.Push.Dialog.v2/0.22.1366.746@0.22.1366.746" timestamp="1579574870790" />
+    <state x="262" y="129" width="800" height="524" key="Vcs.Push.Dialog.v2/0.22.1366.746@0.22.1366.746" timestamp="1579595923679" />
     <state x="262" y="132" key="Vcs.Push.Dialog.v2/0.25.1366.743@0.25.1366.743" timestamp="1578288738724" />
     <state x="302" y="131" width="800" height="528" key="Vcs.Push.Dialog.v2/49.24.1317.744@49.24.1317.744" timestamp="1578198972823" />
     <state x="371" y="57" width="662" height="675" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1577672483821">

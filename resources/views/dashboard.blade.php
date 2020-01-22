@@ -142,7 +142,7 @@
             </div>
             <!-- /.box-header -->
             <div class="box-body table-responsive">
-                <table id="data_tenaga" class="table table-bordered table-striped">
+                <table id="data_tenaga" class="table table-striped">
                     <thead>
                     <tr>
                         <th>NIK</th>
@@ -172,7 +172,7 @@
                     <div class="table-responsive">
                         <table class="table">
                             <tr>
-                                <th style="width:50%">Divisi</th>
+                                <th>Divisi</th>
                                 <td><p id="divisi"></td>
                             </tr>
                             <tr>
@@ -181,15 +181,15 @@
                             </tr>
                             <tr>
                                 <th>Nama Lengkap & Gelar</th>
-                                <td><p id="nm_tenaga"></td>
+                                <td><p style="text-transform: capitalize" id="nm_tenaga"></td>
                             </tr>
                             <tr>
                                 <th>Tempat, Tanggal Lahir</th>
-                                <td id="ttl"></td>
+                                <td id="ttl" style="text-transform: capitalize"></td>
                             </tr>
                             <tr>
                                 <th>Alamat</th>
-                                <td id="alamat"></td>
+                                <td id="alamat" style="text-transform: capitalize"></td>
                             </tr>
                             <tr>
                                 <th>E-Mail</th>
@@ -307,7 +307,14 @@
                 animation: {
                     animateScale: true,
                     animateRotate: true
-                }
+                },
+                legend: {
+                    position: 'bottom',
+                    labels: {
+                        fontColor: "white",
+                        fontSize: 15
+                    }
+                },
             }
         });
     </script>
