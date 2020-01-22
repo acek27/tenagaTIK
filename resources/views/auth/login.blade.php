@@ -44,7 +44,7 @@
         <form method="POST" action="{{ route('login') }}">
             @csrf
             <div class="form-group has-feedback">
-                <input type="email" class="form-control" name="email" placeholder="Email">
+                <input type="email" class="form-control" name="email" placeholder="Email" autofocus>
                 <span
                     class="glyphicon glyphicon-envelope form-control-feedback @error('email') is-invalid @enderror"></span>
                 @error('email')
